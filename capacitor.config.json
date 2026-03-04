@@ -1,0 +1,12 @@
+{
+  "appId": "com.torque.app",
+  "appName": "Torque",
+  "webDir": "dist",
+  "plugins": {
+    "StatusBar": {
+      "overlaysWebView": true,
+      "style": "DARK",
+      "backgroundColor": "#080810"
+    }
+  }
+}

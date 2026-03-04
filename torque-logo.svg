@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 512 512"
+   width="512"
+   height="512"
+   version="1.1"
+   id="svg44"
+   sodipodi:docname="torque-logo-final.svg"
+   inkscape:version="1.4.3 (0d15f75042, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview44"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="2.0152318"
+     inkscape:cx="284.83076"
+     inkscape:cy="284.83076"
+     inkscape:window-width="1707"
+     inkscape:window-height="932"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg44" />
+  <defs
+     id="defs15">
+    <linearGradient
+       id="gearGold"
+       x1="-67.199974"
+       y1="-111.99996"
+       x2="67.199977"
+       y2="111.99996"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0%"
+         style="stop-color:#ffe099"
+         id="stop1" />
+      <stop
+         offset="40%"
+         style="stop-color:#c8a96e"
+         id="stop2" />
+      <stop
+         offset="100%"
+         style="stop-color:#7a5420"
+         id="stop3" />
+    </linearGradient>
+    <linearGradient
+       id="goldV"
+       x1="0%"
+       y1="0%"
+       x2="0%"
+       y2="100%">
+      <stop
+         offset="0%"
+         style="stop-color:#ffe099"
+         id="stop4" />
+      <stop
+         offset="45%"
+         style="stop-color:#c8a96e"
+         id="stop5" />
+      <stop
+         offset="100%"
+         style="stop-color:#8a6430"
+         id="stop6" />
+    </linearGradient>
+    <radialGradient
+       id="faceBg"
+       cx="0"
+       cy="-21.120001"
+       r="109.12"
+       fx="0"
+       fy="-21.120001"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0%"
+         style="stop-color:#181828"
+         id="stop7" />
+      <stop
+         offset="100%"
+         style="stop-color:#07070f"
+         id="stop8" />
+    </radialGradient>
+    <radialGradient
+       id="centerGlow"
+       cx="0"
+       cy="0"
+       r="72"
+       fx="0"
+       fy="0"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0%"
+         style="stop-color:#c8a96e"
+         stop-opacity="0.18"
+         id="stop9" />
+      <stop
+         offset="100%"
+         style="stop-color:#c8a96e"
+         stop-opacity="0"
+         id="stop10" />
+    </radialGradient>
+    <linearGradient
+       id="cardBg"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="100%">
+      <stop
+         offset="0%"
+         style="stop-color:#0e0e1c"
+         id="stop11" />
+      <stop
+         offset="100%"
+         style="stop-color:#080810"
+         id="stop12" />
+    </linearGradient>
+    <filter
+       id="tglow"
+       x="-0.46153846"
+       y="-0.5"
+       width="1.9230769"
+       height="2">
+      <feGaussianBlur
+         stdDeviation="5"
+         result="blur"
+         id="feGaussianBlur12" />
+      <feMerge
+         id="feMerge13">
+        <feMergeNode
+           in="blur"
+           id="feMergeNode12" />
+        <feMergeNode
+           in="SourceGraphic"
+           id="feMergeNode13" />
+      </feMerge>
+    </filter>
+    <filter
+       id="gearglow"
+       x="-15%"
+       y="-15%"
+       width="130%"
+       height="130%">
+      <feGaussianBlur
+         stdDeviation="3"
+         result="blur"
+         id="feGaussianBlur13" />
+      <feMerge
+         id="feMerge15">
+        <feMergeNode
+           in="blur"
+           id="feMergeNode14" />
+        <feMergeNode
+           in="SourceGraphic"
+           id="feMergeNode15" />
+      </feMerge>
+    </filter>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#goldV"
+       id="linearGradient44"
+       x1="-46.07686"
+       y1="-115.19215"
+       x2="-46.07686"
+       y2="-23.038429"
+       gradientTransform="scale(1.9198691,0.52086885)"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#goldV"
+       id="linearGradient45"
+       x1="-40.620193"
+       y1="-35.081074"
+       x2="-40.620193"
+       y2="46.159308"
+       gradientTransform="scale(0.61545745,1.6248077)"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <!-- App icon background -->
+  <rect
+     width="512"
+     height="512"
+     rx="112"
+     fill="url(#cardBg)"
+     id="rect15" />
+  <!-- Subtle background texture — very faint radial rings -->
+  <circle
+     cx="256"
+     cy="256"
+     r="210"
+     fill="none"
+     stroke="#c8a96e"
+     stroke-width="0.6"
+     opacity="0.06"
+     id="circle15" />
+  <!-- ── GEAR ── -->
+  <g
+     transform="matrix(1.5185388,0,0,1.4815609,256,256)"
+     id="g44">
+    <!-- Gear body — mathematically generated, perfect 12 teeth -->
+    <path
+       d="m -22.7761,-85.0015 13.9887,-26.6532 a 112,112 0 0 1 17.5748,0 l -0.0473,24.0898 a 88,88 0 0 1 14.036,2.5634 v 0 l 25.4411,-16.0881 a 112,112 0 0 1 15.2203,8.7875 l -12.0859,20.8387 a 88,88 0 0 1 10.8738,9.238 v 0 l 30.0767,-1.2121 a 112,112 0 0 1 8.7875,15.2203 l -20.8861,12.0039 a 88,88 0 0 1 4.798,13.4372 v 0 l 26.6532,13.9887 a 112,112 0 0 1 0,17.5748 L 87.5649,8.7401 a 88,88 0 0 1 -2.5634,14.036 v 0 l 16.0881,25.4411 A 112,112 0 0 1 92.3021,63.4375 L 71.4634,51.3516 a 88,88 0 0 1 -9.238,10.8738 v 0 l 1.2121,30.0767 a 112,112 0 0 1 -15.2203,8.7875 L 36.2133,80.2035 a 88,88 0 0 1 -13.4372,4.798 v 0 L 8.7874,111.6547 a 112,112 0 0 1 -17.5748,0 l 0.0473,-24.0898 a 88,88 0 0 1 -14.036,-2.5634 v 0 l -25.4411,16.0881 a 112,112 0 0 1 -15.2203,-8.7875 l 12.0859,-20.8387 a 88,88 0 0 1 -10.8738,-9.238 v 0 l -30.0767,1.2121 a 112,112 0 0 1 -8.7875,-15.2203 l 20.8861,-12.0039 a 88,88 0 0 1 -4.798,-13.4372 v 0 L -111.6547,8.7874 a 112,112 0 0 1 0,-17.5748 l 24.0898,0.0473 a 88,88 0 0 1 2.5634,-14.036 v 0 l -16.0881,-25.4411 a 112,112 0 0 1 8.7875,-15.2203 l 20.8387,12.0859 a 88,88 0 0 1 9.238,-10.8738 v 0 l -1.2121,-30.0767 a 112,112 0 0 1 15.2203,-8.7875 l 12.0039,20.8861 a 88,88 0 0 1 13.4372,-4.798 z"
+       fill="url(#gearGold)"
+       stroke="none"
+       id="path16"
+       style="fill:url(#gearGold)" />
+    <!-- Gear face (inner disc) -->
+    <circle
+       r="88"
+       fill="url(#faceBg)"
+       id="circle17"
+       style="fill:url(#faceBg)"
+       cx="0"
+       cy="0" />
+    <!-- Bevel: outer gold ring -->
+    <circle
+       r="88"
+       fill="none"
+       stroke="#c8a96e"
+       stroke-width="3"
+       opacity="0.65"
+       id="circle18"
+       cx="0"
+       cy="0" />
+    <!-- Bevel: inner shadow ring -->
+    <circle
+       r="84"
+       fill="none"
+       stroke="#050508"
+       stroke-width="5"
+       opacity="0.75"
+       id="circle19"
+       cx="0"
+       cy="0" />
+    <!-- Bevel: inner highlight ring -->
+    <circle
+       r="80"
+       fill="none"
+       stroke="#c8a96e"
+       stroke-width="1"
+       opacity="0.22"
+       id="circle20"
+       cx="0"
+       cy="0" />
+    <!-- Subtle centre ambient glow -->
+    <circle
+       r="72"
+       fill="url(#centerGlow)"
+       id="circle21"
+       style="fill:url(#centerGlow)"
+       cx="0"
+       cy="0" />
+    <!-- Precision tick marks (12, one per tooth, on inner bevel ring) -->
+    <g
+       stroke="#c8a96e"
+       stroke-linecap="round"
+       opacity="0.45"
+       id="g32">
+      <line
+         x1="0"
+         y1="-80"
+         x2="0"
+         y2="-70"
+         stroke-width="2.2"
+         id="line21" />
+      <line
+         x1="40"
+         y1="-69.300003"
+         x2="35"
+         y2="-60.599998"
+         stroke-width="1.6"
+         id="line22" />
+      <line
+         x1="69.300003"
+         y1="-40"
+         x2="60.599998"
+         y2="-35"
+         stroke-width="1.6"
+         id="line23" />
+      <line
+         x1="80"
+         y1="0"
+         x2="70"
+         y2="0"
+         stroke-width="2.2"
+         id="line24" />
+      <line
+         x1="69.300003"
+         y1="40"
+         x2="60.599998"
+         y2="35"
+         stroke-width="1.6"
+         id="line25" />
+      <line
+         x1="40"
+         y1="69.300003"
+         x2="35"
+         y2="60.599998"
+         stroke-width="1.6"
+         id="line26" />
+      <line
+         x1="0"
+         y1="80"
+         x2="0"
+         y2="70"
+         stroke-width="2.2"
+         id="line27" />
+      <line
+         x1="-40"
+         y1="69.300003"
+         x2="-35"
+         y2="60.599998"
+         stroke-width="1.6"
+         id="line28" />
+      <line
+         x1="-69.300003"
+         y1="40"
+         x2="-60.599998"
+         y2="35"
+         stroke-width="1.6"
+         id="line29" />
+      <line
+         x1="-80"
+         y1="0"
+         x2="-70"
+         y2="0"
+         stroke-width="2.2"
+         id="line30" />
+      <line
+         x1="-69.300003"
+         y1="-40"
+         x2="-60.599998"
+         y2="-35"
+         stroke-width="1.6"
+         id="line31" />
+      <line
+         x1="-40"
+         y1="-69.300003"
+         x2="-35"
+         y2="-60.599998"
+         stroke-width="1.6"
+         id="line32" />
+    </g>
+    <!-- Centre hole -->
+    <circle
+       r="19"
+       fill="#050508"
+       stroke="#c8a96e"
+       stroke-width="2.5"
+       opacity="0.75"
+       id="circle32"
+       cx="0"
+       cy="0" />
+    <circle
+       r="10"
+       fill="#07070f"
+       stroke="#c8a96e"
+       stroke-width="0.8"
+       opacity="0.3"
+       id="circle33"
+       cx="0"
+       cy="0" />
+    <!-- Six hex bolt dots around hub -->
+    <g
+       fill="#c8a96e"
+       opacity="0.28"
+       id="g39">
+      <circle
+         cx="0"
+         cy="-15"
+         r="2.2"
+         id="circle34" />
+      <circle
+         cx="13"
+         cy="-7.5"
+         r="2.2"
+         id="circle35" />
+      <circle
+         cx="13"
+         cy="7.5"
+         r="2.2"
+         id="circle36" />
+      <circle
+         cx="0"
+         cy="15"
+         r="2.2"
+         id="circle37" />
+      <circle
+         cx="-13"
+         cy="7.5"
+         r="2.2"
+         id="circle38" />
+      <circle
+         cx="-13"
+         cy="-7.5"
+         r="2.2"
+         id="circle39" />
+    </g>
+    <!-- ── THE T ── -->
+    <!-- Crossbar -->
+    <rect
+       x="-46"
+       y="-48"
+       width="92"
+       height="24"
+       rx="5.5"
+       fill="url(#goldV)"
+       filter="url(#tglow)"
+       id="rect39"
+       style="fill:url(#linearGradient44)" />
+    <!-- Stem -->
+    <rect
+       x="-13"
+       y="-24"
+       width="26"
+       height="66"
+       rx="5.5"
+       fill="url(#goldV)"
+       filter="url(#tglow)"
+       id="rect40"
+       style="fill:url(#linearGradient45)" />
+    <!-- T surface highlights (top-left lighting) -->
+    <rect
+       x="-46"
+       y="-48"
+       width="92"
+       height="5.5"
+       rx="4"
+       fill="#ffe8b0"
+       opacity="0.32"
+       id="rect41" />
+    <rect
+       x="-46"
+       y="-48"
+       width="5.5"
+       height="24"
+       rx="4"
+       fill="#ffe8b0"
+       opacity="0.18"
+       id="rect42" />
+    <rect
+       x="-13"
+       y="-24"
+       width="7"
+       height="66"
+       rx="4"
+       fill="#ffe8b0"
+       opacity="0.15"
+       id="rect43" />
+    <!-- Machined notch at T crossbar/stem junction -->
+    <rect
+       x="-3.5"
+       y="-26"
+       width="7"
+       height="4"
+       rx="1.5"
+       fill="#07070f"
+       opacity="0.55"
+       id="rect44" />
+  </g>
+</svg>
