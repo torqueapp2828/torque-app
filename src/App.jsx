@@ -219,7 +219,7 @@ const fmtCurrency = n => `₹${Number(n).toLocaleString("en-IN")}`;
 // ─── Theme ────────────────────────────────────────────────────────────────────
 const DARK = {
   bg:"#080810", surface:"#111118", border:"#1e1e2e", border2:"#2a2a3e",
-  text:"#e8e8f0", sub:"#888", muted:"#444", accent:"#c8a96e",
+  text:"#e8e8f0", sub:"#9999aa", muted:"#6a6a7e", accent:"#c8a96e",
   accentDim:"#1e1a10", accentBorder:"#c8a96e",
   danger:"#ff8888", dangerBg:"#1a0808", dangerBorder:"#3d1a1a",
   warn:"#ffcc44", warnBg:"#1a1400", warnBorder:"#3d3200",
@@ -229,7 +229,7 @@ const DARK = {
 };
 const LIGHT = {
   bg:"#f4f4f0", surface:"#ffffff", border:"#e0e0d0", border2:"#d0d0c0",
-  text:"#1a1a1a", sub:"#666", muted:"#aaa", accent:"#a8843e",
+  text:"#1a1a1a", sub:"#555", muted:"#888", accent:"#a8843e",
   accentDim:"#fdf6e3", accentBorder:"#a8843e",
   danger:"#c0392b", dangerBg:"#fff0ee", dangerBorder:"#f5c6c0",
   warn:"#8b6914", warnBg:"#fffbec", warnBorder:"#f0d88a",
@@ -243,7 +243,7 @@ function buildStyles(T) {
   return `
     @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Space+Mono:wght@400;700&display=swap');
     *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
-    body { background:${T.bg}; font-family:'DM Sans',sans-serif; color:${T.text}; user-select:none; }
+    body { background:${T.bg}; font-family:'DM Sans',sans-serif; color:${T.text}; user-select:none; line-height:1.5; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
     ::-webkit-scrollbar { width:3px; height:3px; }
     ::-webkit-scrollbar-thumb { background:${T.border2}; border-radius:2px; }
 
@@ -285,10 +285,10 @@ function buildStyles(T) {
     .pin-key:active { background:${T.accentDim}; border-color:${T.accent}; transform:scale(0.94); }
     .pin-key.del { font-size:18px; }
     .pin-key.bio { font-size:26px; border-color:${T.blueBorder}; background:${T.blueBg}; }
-    .pin-key-sub { font-size:9px; font-weight:400; color:${T.muted}; letter-spacing:0.05em; }
+    .pin-key-sub { font-size:10px; font-weight:400; color:${T.muted}; letter-spacing:0.05em; }
 
     .tab-btn { background:none; border:none; padding:11px 15px; color:${T.muted}; cursor:pointer;
-      font-family:'DM Sans',sans-serif; font-size:12px; font-weight:500;
+      font-family:'DM Sans',sans-serif; font-size:13px; font-weight:500;
       border-bottom:2px solid transparent; transition:all 0.18s; white-space:nowrap; }
     .tab-btn.active { color:${T.accent}; border-bottom-color:${T.accent}; }
 
@@ -308,7 +308,7 @@ function buildStyles(T) {
     .filter-btn.active { background:${T.accentDim}; border-color:${T.accent}; color:${T.accent}; }
 
     .pill { display:inline-flex; align-items:center; padding:2px 8px; border-radius:20px;
-      font-size:10px; font-weight:700; letter-spacing:0.04em; }
+      font-size:11px; font-weight:700; letter-spacing:0.03em; }
 
     .photo-thumb { width:80px; height:80px; border-radius:10px; object-fit:cover;
       border:1px solid ${T.border}; cursor:pointer; transition:opacity 0.15s; flex-shrink:0; }
@@ -323,7 +323,7 @@ function buildStyles(T) {
     .row-item { display:flex; justify-content:space-between; align-items:center;
       padding:10px 0; border-bottom:1px solid ${T.border}; }
     .row-item:last-child { border-bottom:none; }
-    .section-label { font-size:10px; color:${T.sub}; font-weight:700;
+    .section-label { font-size:11px; color:${T.sub}; font-weight:700;
       text-transform:uppercase; letter-spacing:0.1em; margin-bottom:12px; display:block; }
 
     /* Swipe tabs */
@@ -1432,6 +1432,72 @@ function AddVehicleWizard({ onSave, onCancel, editVehicle, T }) {
   );
 }
 
+// ─── Service Tab ──────────────────────────────────────────────────────────────
+const SVC_TYPES = ["Full Service","Oil Change","Brake Check","Tyre Rotation","Battery Check","AC Service","Other"];
+
+function ServiceTab({ vehicle, onUpdate, T }) {
+  const [showAdd, setShowAdd] = useState(false);
+  const [form, setForm] = useState({ type:"Full Service", date:"", km:"", next:"" });
+  const set = (k,v) => setForm(f=>({...f,[k]:v}));
+  const v = vehicle;
+
+  const add = () => {
+    if (!form.date || !form.km) return;
+    const entry = { date:form.date, type:form.type, km:Number(form.km), next:Number(form.next)||Number(form.km)+5000 };
+    onUpdate({ ...v, service:[entry, ...(v.service||[])] });
+    setShowAdd(false);
+    setForm({ type:"Full Service", date:"", km:"", next:"" });
+  };
+
+  return (
+    <div className="fade">
+      <button className="btn-gold" style={{ width:"100%", padding:13, marginBottom:14 }}
+        onClick={()=>setShowAdd(s=>!s)}>
+        {showAdd ? "Cancel" : <><WrenchIcon s={14}/> Log Service</>}
+      </button>
+      {showAdd && (
+        <div className="card pop" style={{ padding:16, marginBottom:14 }}>
+          <span className="section-label">New Service Record</span>
+          <div style={{ marginBottom:12 }}>
+            <div style={{ fontSize:12, color:T.sub, marginBottom:5 }}>Service Type</div>
+            <select className="input" value={form.type} onChange={e=>set("type",e.target.value)}>
+              {SVC_TYPES.map(s=><option key={s}>{s}</option>)}
+            </select>
+          </div>
+          <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:10, marginBottom:10 }}>
+            <div>
+              <div style={{ fontSize:12, color:T.sub, marginBottom:5 }}>Date</div>
+              <input className="input" type="date" value={form.date} onChange={e=>set("date",e.target.value)}/>
+            </div>
+            <div>
+              <div style={{ fontSize:12, color:T.sub, marginBottom:5 }}>Odometer km</div>
+              <input className="input" type="number" placeholder="24500" value={form.km} onChange={e=>set("km",e.target.value)}/>
+            </div>
+            <div style={{ gridColumn:"1/-1" }}>
+              <div style={{ fontSize:12, color:T.sub, marginBottom:5 }}>Next Service km <span style={{ color:T.muted }}>(optional)</span></div>
+              <input className="input" type="number" placeholder="Auto: +5000 km" value={form.next} onChange={e=>set("next",e.target.value)}/>
+            </div>
+          </div>
+          <button className="btn-gold" style={{ width:"100%", padding:11 }} onClick={add} disabled={!form.date||!form.km}>Save</button>
+        </div>
+      )}
+      {(v.service||[]).length===0
+        ? <div className="card" style={{ padding:24, textAlign:"center" }}><div style={{ fontSize:28, marginBottom:8 }}>🔧</div><div style={{ color:T.muted, fontSize:13 }}>No service records</div></div>
+        : <div className="card" style={{ padding:16 }}>
+            <span className="section-label">History</span>
+            {(v.service||[]).map((s,i)=>(
+              <div key={i} style={{ borderLeft:`2px solid ${T.border2}`, paddingLeft:16, position:"relative", marginBottom:i<v.service.length-1?20:0 }}>
+                <div style={{ position:"absolute", left:-5, top:5, width:8, height:8, borderRadius:"50%", background:T.accent }}/>
+                <div style={{ fontSize:14, fontWeight:600 }}>{s.type}</div>
+                <div style={{ fontSize:12, color:T.muted, marginTop:2 }}>{fmtDate(s.date)}</div>
+                <div style={{ fontSize:12, color:T.accent, fontFamily:"'Space Mono',monospace", marginTop:3 }}>@ {s.km?.toLocaleString()} km → next {s.next?.toLocaleString()} km</div>
+              </div>
+            ))}
+          </div>}
+    </div>
+  );
+}
+
 // ─── Detail View (with swipe tabs) ────────────────────────────────────────────
 const DETAIL_TABS = [
   { id:"overview",     label:"Overview" },
@@ -1565,21 +1631,7 @@ function DetailView({ vehicle, onBack, onUpdate, onDelete, T }) {
 
               {t.id==="parking"&&<div className="fade"><ParkingCard vehicle={v} onUpdate={onUpdate} T={T}/></div>}
 
-              {t.id==="service"&&<div className="fade">
-                <button className="btn-gold" style={{ width:"100%", padding:13, marginBottom:14 }} onClick={()=>{
-                  const tp=prompt("Service type:","Full Service"); const d=prompt("Date (YYYY-MM-DD):"); const km=prompt("Odometer km:"); const nx=prompt("Next service km:");
-                  if(tp&&d&&km) onUpdate({...v,service:[{date:d,type:tp,km:Number(km),next:Number(nx)||Number(km)+5000},...(v.service||[])]});
-                }}>+ Log Service</button>
-                {(v.service||[]).length===0?<div className="card" style={{ padding:24, textAlign:"center" }}><div style={{ fontSize:28, marginBottom:8 }}>🔧</div><div style={{ color:T.muted, fontSize:13 }}>No service records</div></div>:
-                  <div className="card" style={{ padding:16 }}><span className="section-label">History</span>{(v.service||[]).map((s,i)=>(
-                    <div key={i} style={{ borderLeft:`2px solid ${T.border2}`, paddingLeft:16, position:"relative", marginBottom:20 }}>
-                      <div style={{ position:"absolute", left:-5, top:5, width:8, height:8, borderRadius:"50%", background:T.accent }}/>
-                      <div style={{ fontSize:13, fontWeight:600 }}>{s.type}</div>
-                      <div style={{ fontSize:11, color:T.muted }}>{fmtDate(s.date)}</div>
-                      <div style={{ fontSize:11, color:T.accent, fontFamily:"'Space Mono',monospace", marginTop:3 }}>@ {s.km?.toLocaleString()} km → {s.next?.toLocaleString()} km</div>
-                    </div>
-                  ))}</div>}
-              </div>}
+              {t.id==="service"&&<ServiceTab vehicle={v} onUpdate={onUpdate} T={T}/>}
 
               {t.id==="fuel"&&<div className="fade"><FuelLog fuelLog={v.fuelLog||[]} onChange={fl=>upd({fuelLog:fl})} T={T}/></div>}
               {t.id==="odometer"&&<div className="fade"><OdometerTracker odoLog={v.odoLog||[]} onChange={ol=>upd({odoLog:ol})} T={T}/></div>}
@@ -1801,7 +1853,7 @@ export default function App() {
             })}
           </div>
           {sorted.length===0&&<div style={{ textAlign:"center", padding:"40px 0", color:T.muted, fontSize:13 }}>No vehicles match</div>}
-          <div style={{ textAlign:"center", padding:"18px 0 6px", color:T.border2, fontSize:11 }}>
+          <div style={{ textAlign:"center", padding:"18px 0 6px", color:T.muted, fontSize:12 }}>
             {sorted.length} vehicle{sorted.length!==1?"s":""} · 🔐 AES-256 encrypted
           </div>
         </>}
