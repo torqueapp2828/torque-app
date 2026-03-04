@@ -1,0 +1,192 @@
+<svg viewBox="0 0 1280 640" width="1280" height="640" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <!-- Background gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0e0e1c"/>
+      <stop offset="100%" style="stop-color:#080810"/>
+    </linearGradient>
+    <!-- Gold gradient for text/accents -->
+    <linearGradient id="goldH" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ffe099"/>
+      <stop offset="45%" style="stop-color:#c8a96e"/>
+      <stop offset="100%" style="stop-color:#8a6430"/>
+    </linearGradient>
+    <linearGradient id="goldV2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffe099"/>
+      <stop offset="45%" style="stop-color:#c8a96e"/>
+      <stop offset="100%" style="stop-color:#8a6430"/>
+    </linearGradient>
+    <!-- Gear gold -->
+    <linearGradient id="gearGold" x1="-67" y1="-112" x2="67" y2="112" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" style="stop-color:#ffe099"/>
+      <stop offset="40%" style="stop-color:#c8a96e"/>
+      <stop offset="100%" style="stop-color:#7a5420"/>
+    </linearGradient>
+    <linearGradient id="gV" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffe099"/>
+      <stop offset="45%" style="stop-color:#c8a96e"/>
+      <stop offset="100%" style="stop-color:#8a6430"/>
+    </linearGradient>
+    <radialGradient id="faceBg" cx="0" cy="-21" r="109" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" style="stop-color:#181828"/>
+      <stop offset="100%" style="stop-color:#07070f"/>
+    </radialGradient>
+    <radialGradient id="centerGlow" cx="0" cy="0" r="72" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" style="stop-color:#c8a96e;stop-opacity:0.18"/>
+      <stop offset="100%" style="stop-color:#c8a96e;stop-opacity:0"/>
+    </radialGradient>
+    <filter id="tglow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="gearglow" x="-15%" y="-15%" width="130%" height="130%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softglow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="18" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <linearGradient id="divider" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#c8a96e;stop-opacity:0"/>
+      <stop offset="40%" style="stop-color:#c8a96e;stop-opacity:0.5"/>
+      <stop offset="100%" style="stop-color:#c8a96e;stop-opacity:0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="640" fill="url(#bgGrad)"/>
+
+  <!-- Subtle radial glow behind logo -->
+  <circle cx="240" cy="320" r="260" fill="#c8a96e" opacity="0.04"/>
+
+  <!-- Decorative rings -->
+  <circle cx="240" cy="320" r="220" fill="none" stroke="#c8a96e" stroke-width="0.5" opacity="0.07"/>
+  <circle cx="240" cy="320" r="180" fill="none" stroke="#c8a96e" stroke-width="0.5" opacity="0.05"/>
+
+  <!-- Vertical gold divider -->
+  <rect x="490" y="60" width="1" height="520" fill="url(#divider)"/>
+
+  <!-- ── LOGO (centered left, scaled 0.38x from 512 origin → placed at 240,320) ── -->
+  <g transform="translate(240,320) scale(0.38)">
+    <!-- Gear -->
+    <path d="m -22.7761,-85.0015 13.9887,-26.6532 a 112,112 0 0 1 17.5748,0 l -0.0473,24.0898 a 88,88 0 0 1 14.036,2.5634 v 0 l 25.4411,-16.0881 a 112,112 0 0 1 15.2203,8.7875 l -12.0859,20.8387 a 88,88 0 0 1 10.8738,9.238 v 0 l 30.0767,-1.2121 a 112,112 0 0 1 8.7875,15.2203 l -20.8861,12.0039 a 88,88 0 0 1 4.798,13.4372 v 0 l 26.6532,13.9887 a 112,112 0 0 1 0,17.5748 L 87.5649,8.7401 a 88,88 0 0 1 -2.5634,14.036 v 0 l 16.0881,25.4411 A 112,112 0 0 1 92.3021,63.4375 L 71.4634,51.3516 a 88,88 0 0 1 -9.238,10.8738 v 0 l 1.2121,30.0767 a 112,112 0 0 1 -15.2203,8.7875 L 36.2133,80.2035 a 88,88 0 0 1 -13.4372,4.798 v 0 L 8.7874,111.6547 a 112,112 0 0 1 -17.5748,0 l 0.0473,-24.0898 a 88,88 0 0 1 -14.036,-2.5634 v 0 l -25.4411,16.0881 a 112,112 0 0 1 -15.2203,-8.7875 l 12.0859,-20.8387 a 88,88 0 0 1 -10.8738,-9.238 v 0 l -30.0767,1.2121 a 112,112 0 0 1 -8.7875,-15.2203 l 20.8861,-12.0039 a 88,88 0 0 1 -4.798,-13.4372 v 0 L -111.6547,8.7874 a 112,112 0 0 1 0,-17.5748 l 24.0898,0.0473 a 88,88 0 0 1 2.5634,-14.036 v 0 l -16.0881,-25.4411 a 112,112 0 0 1 8.7875,-15.2203 l 20.8387,12.0859 a 88,88 0 0 1 9.238,-10.8738 v 0 l -1.2121,-30.0767 a 112,112 0 0 1 15.2203,-8.7875 l 12.0039,20.8861 a 88,88 0 0 1 13.4372,-4.798 z"
+          fill="url(#gearGold)" filter="url(#gearglow)"/>
+    <!-- Gear face -->
+    <circle r="88" fill="url(#faceBg)"/>
+    <circle r="88" fill="none" stroke="#c8a96e" stroke-width="3" opacity="0.65"/>
+    <circle r="84" fill="none" stroke="#050508" stroke-width="5" opacity="0.75"/>
+    <circle r="80" fill="none" stroke="#c8a96e" stroke-width="1" opacity="0.22"/>
+    <circle r="72" fill="url(#centerGlow)"/>
+    <!-- Tick marks -->
+    <g stroke="#c8a96e" stroke-linecap="round" opacity="0.45">
+      <line x1="0" y1="-80" x2="0" y2="-70" stroke-width="2.2"/>
+      <line x1="40" y1="-69.3" x2="35" y2="-60.6" stroke-width="1.6"/>
+      <line x1="69.3" y1="-40" x2="60.6" y2="-35" stroke-width="1.6"/>
+      <line x1="80" y1="0" x2="70" y2="0" stroke-width="2.2"/>
+      <line x1="69.3" y1="40" x2="60.6" y2="35" stroke-width="1.6"/>
+      <line x1="40" y1="69.3" x2="35" y2="60.6" stroke-width="1.6"/>
+      <line x1="0" y1="80" x2="0" y2="70" stroke-width="2.2"/>
+      <line x1="-40" y1="69.3" x2="-35" y2="60.6" stroke-width="1.6"/>
+      <line x1="-69.3" y1="40" x2="-60.6" y2="35" stroke-width="1.6"/>
+      <line x1="-80" y1="0" x2="-70" y2="0" stroke-width="2.2"/>
+      <line x1="-69.3" y1="-40" x2="-60.6" y2="-35" stroke-width="1.6"/>
+      <line x1="-40" y1="-69.3" x2="-35" y2="-60.6" stroke-width="1.6"/>
+    </g>
+    <!-- Centre hole -->
+    <circle r="19" fill="#050508" stroke="#c8a96e" stroke-width="2.5" opacity="0.75"/>
+    <circle r="10" fill="#07070f" stroke="#c8a96e" stroke-width="0.8" opacity="0.3"/>
+    <!-- Hex bolts -->
+    <g fill="#c8a96e" opacity="0.28">
+      <circle cx="0" cy="-15" r="2.2"/>
+      <circle cx="13" cy="-7.5" r="2.2"/>
+      <circle cx="13" cy="7.5" r="2.2"/>
+      <circle cx="0" cy="15" r="2.2"/>
+      <circle cx="-13" cy="7.5" r="2.2"/>
+      <circle cx="-13" cy="-7.5" r="2.2"/>
+    </g>
+    <!-- T crossbar -->
+    <rect x="-46" y="-48" width="92" height="24" rx="5.5" fill="url(#gV)" filter="url(#tglow)"/>
+    <!-- T stem -->
+    <rect x="-13" y="-24" width="26" height="66" rx="5.5" fill="url(#gV)" filter="url(#tglow)"/>
+    <!-- T highlights -->
+    <rect x="-46" y="-48" width="92" height="5.5" rx="4" fill="#ffe8b0" opacity="0.32"/>
+    <rect x="-46" y="-48" width="5.5" height="24" rx="4" fill="#ffe8b0" opacity="0.18"/>
+    <rect x="-13" y="-24" width="7" height="66" rx="4" fill="#ffe8b0" opacity="0.15"/>
+    <rect x="-3.5" y="-26" width="7" height="4" rx="1.5" fill="#07070f" opacity="0.55"/>
+  </g>
+
+  <!-- ── RIGHT SIDE CONTENT ── -->
+
+  <!-- App name -->
+  <text x="548" y="175" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="96" font-weight="700" letter-spacing="-2" fill="url(#goldH)">Torque</text>
+
+  <!-- Tagline -->
+  <text x="550" y="228" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="26" fill="#a89070" letter-spacing="0.5">Vehicle Fleet Manager for Android</text>
+
+  <!-- Short description -->
+  <text x="550" y="282" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="21" fill="#7a6a5a" letter-spacing="0.2">Track insurance, fuel, service &amp; more — encrypted locally.</text>
+
+  <!-- Gold rule -->
+  <rect x="550" y="302" width="660" height="1.5" fill="url(#goldH)" opacity="0.25"/>
+
+  <!-- Feature pills — row 1 -->
+  <g font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="18" fill="#c8a96e">
+    <!-- pill helper: rect + text -->
+    <rect x="550" y="320" width="195" height="38" rx="19" fill="#c8a96e" fill-opacity="0.08" stroke="#c8a96e" stroke-width="0.8" stroke-opacity="0.3"/>
+    <text x="647" y="344" text-anchor="middle" fill="#c8a96e">🛡 Insurance Alerts</text>
+
+    <rect x="758" y="320" width="168" height="38" rx="19" fill="#c8a96e" fill-opacity="0.08" stroke="#c8a96e" stroke-width="0.8" stroke-opacity="0.3"/>
+    <text x="842" y="344" text-anchor="middle" fill="#c8a96e">⛽ Fuel Tracking</text>
+
+    <rect x="940" y="320" width="168" height="38" rx="19" fill="#c8a96e" fill-opacity="0.08" stroke="#c8a96e" stroke-width="0.8" stroke-opacity="0.3"/>
+    <text x="1024" y="344" text-anchor="middle" fill="#c8a96e">🔧 Service Logs</text>
+
+    <rect x="1122" y="320" width="148" height="38" rx="19" fill="#c8a96e" fill-opacity="0.08" stroke="#c8a96e" stroke-width="0.8" stroke-opacity="0.3"/>
+    <text x="1196" y="344" text-anchor="middle" fill="#c8a96e">📍 GPS Park</text>
+  </g>
+
+  <!-- Feature pills — row 2 -->
+  <g font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="18" fill="#c8a96e">
+    <rect x="550" y="372" width="182" height="38" rx="19" fill="#c8a96e" fill-opacity="0.08" stroke="#c8a96e" stroke-width="0.8" stroke-opacity="0.3"/>
+    <text x="641" y="396" text-anchor="middle" fill="#c8a96e">🔒 AES-256 Encrypt</text>
+
+    <rect x="746" y="372" width="190" height="38" rx="19" fill="#c8a96e" fill-opacity="0.08" stroke="#c8a96e" stroke-width="0.8" stroke-opacity="0.3"/>
+    <text x="841" y="396" text-anchor="middle" fill="#c8a96e">☁ Google Drive Backup</text>
+
+    <rect x="950" y="372" width="170" height="38" rx="19" fill="#c8a96e" fill-opacity="0.08" stroke="#c8a96e" stroke-width="0.8" stroke-opacity="0.3"/>
+    <text x="1035" y="396" text-anchor="middle" fill="#c8a96e">🤳 Biometric Auth</text>
+
+    <rect x="1134" y="372" width="136" height="38" rx="19" fill="#c8a96e" fill-opacity="0.08" stroke="#c8a96e" stroke-width="0.8" stroke-opacity="0.3"/>
+    <text x="1202" y="396" text-anchor="middle" fill="#c8a96e">📸 Photo Log</text>
+  </g>
+
+  <!-- Bottom rule -->
+  <rect x="550" y="430" width="660" height="1" fill="url(#goldH)" opacity="0.15"/>
+
+  <!-- Tech stack badges -->
+  <g font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" fill="#5a4e40">
+    <text x="550" y="462">Built with</text>
+
+    <rect x="624" y="444" width="82" height="26" rx="5" fill="#c8a96e" fill-opacity="0.1" stroke="#c8a96e" stroke-width="0.6" stroke-opacity="0.25"/>
+    <text x="665" y="462" text-anchor="middle" fill="#8a7a60">React 19</text>
+
+    <rect x="716" y="444" width="74" height="26" rx="5" fill="#c8a96e" fill-opacity="0.1" stroke="#c8a96e" stroke-width="0.6" stroke-opacity="0.25"/>
+    <text x="753" y="462" text-anchor="middle" fill="#8a7a60">Vite 8</text>
+
+    <rect x="800" y="444" width="104" height="26" rx="5" fill="#c8a96e" fill-opacity="0.1" stroke="#c8a96e" stroke-width="0.6" stroke-opacity="0.25"/>
+    <text x="852" y="462" text-anchor="middle" fill="#8a7a60">Capacitor 8</text>
+
+    <rect x="914" y="444" width="86" height="26" rx="5" fill="#c8a96e" fill-opacity="0.1" stroke="#c8a96e" stroke-width="0.6" stroke-opacity="0.25"/>
+    <text x="957" y="462" text-anchor="middle" fill="#8a7a60">Leaflet.js</text>
+
+    <rect x="1010" y="444" width="78" height="26" rx="5" fill="#c8a96e" fill-opacity="0.1" stroke="#c8a96e" stroke-width="0.6" stroke-opacity="0.25"/>
+    <text x="1049" y="462" text-anchor="middle" fill="#8a7a60">Android</text>
+  </g>
+
+  <!-- GitHub URL -->
+  <text x="550" y="510" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="18" fill="#4a3e30" letter-spacing="0.3">github.com/torqueapp2828/torque-app</text>
+
+  <!-- Bottom gold accent bar -->
+  <rect x="0" y="624" width="1280" height="16" fill="url(#goldH)" opacity="0.5" rx="0"/>
+</svg>
